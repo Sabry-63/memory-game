@@ -21,7 +21,7 @@ function show() {
   });
 }
 
-let duration = 1500;
+let duration = 1000;
 
 let blocksContainer = document.querySelector(".memory-game-blocks");
 
