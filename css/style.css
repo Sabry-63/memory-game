@@ -129,20 +129,23 @@ body {
     }
     .info-container {
         font-size: 14px;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 10px 15px ;
+    }
+    .info-container div{
+        flex: 1 0 50%;
+        margin-bottom: 5px;
+        text-align: center;
     }
     .memory-game-blocks .game-block {
         height: 100px;
         margin: 0 10px 5px;
     }
-
     .memory-game-blocks .game-block .front {
-        background-color: #222;
         line-height: 100px;
     }
     .memory-game-blocks .game-block .front::before {
-        content: "!";
-        color: #fff;
         font-size: 50px;
-        font-weight: bold;
     }
 }
