@@ -93,6 +93,9 @@ body {
   .memory-game-blocks {
     width: 100%;
   }
+  .info-container {
+    font-size: 14px;
+}
 }
 .memory-game-blocks .game-block .front {
   background-color: #222;
