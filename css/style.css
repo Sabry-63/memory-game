@@ -5,7 +5,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   text-transform: capitalize;
 }
-.control-btn {
+.control-btn,
+.box-win {
   position: fixed;
   top: 0;
   left: 0;
@@ -14,7 +15,11 @@ body {
   z-index: 2;
   background-color: rgba(115, 194, 214, 0.89);
 }
-.control-btn span {
+.box-win {
+  background-color: rgba(143, 99, 50, 0.89) !important;
+  visibility: hidden;
+}
+.start {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -24,9 +29,23 @@ body {
   padding: 15px 25px;
   font-size: 30px;
   border-radius: 8px;
+  text-align: center;
   cursor: pointer;
 }
-
+.concent{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+.concent span{
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font-weight: bold;
+  z-index: 3;
+}
 .info-container {
   width: 85%;
   margin: 20px auto;
@@ -35,12 +54,14 @@ body {
   padding: 15px;
   display: flex;
   font-size: 20px;
+  display: flex;
+  justify-content: space-between;
 }
-.info-container .name,
-.info-container .tries {
-  width: 50%;
+
+.timer {
+  text-align: right;
 }
-.info-container .tries {
+.tries {
   text-align: right;
 }
 
@@ -62,15 +83,15 @@ body {
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
-  flex: 1 0 200px;
+  flex: 1 0 15%;
   margin: 0 20px 15px;
 }
 @media (max-width: 992px) {
+  .control-btn span {
+    width: 80%;
+  }
   .memory-game-blocks {
     width: 100%;
-  }
-  .memory-game-blocks .game-block {
-    flex: 1 0 145px;
   }
 }
 .memory-game-blocks .game-block .front {
@@ -88,7 +109,8 @@ body {
   transform: rotateY(180deg);
 }
 .memory-game-blocks .game-block .back img {
-  height: 190px;
+  height: 100%;
+  width: 100%;
 }
 .memory-game-blocks .game-block .face {
   width: 100%;
@@ -103,4 +125,5 @@ body {
   --webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   transform: rotateY(180deg);
+  pointer-events: none;
 }
