@@ -10,13 +10,39 @@
 
 <body>
   <div class="control-btn">
-    <span>Start Game</span>
+    <span class="start">Start Game</span>
   </div>
-
+  <div class="box-win">
+    <div class="concent">
+      <span>Your Win</span>
+      <br>
+      <span class="Your-time">
+        Your Time:
+        <span></span>
+      </span>
+      <br>
+      <span class="name">
+        Your Name:
+        <span></span>
+      </span>
+      <br>
+      <span class="tries">
+        Worng Tries:
+        <span>0</span>
+      </span>
+    </div>
+    
+  </div>
   <div class="info-container">
     <div class="name">
       Hello:
       <span></span>
+    </div>
+    <div class="timer">
+      time:
+      <span class="min">00</span>
+      <span>:</span>
+      <span class="scend">00</span>
     </div>
     <div class="tries">
       Worng Tries:
@@ -165,7 +191,6 @@
         <img src="images/10.png" alt="">
       </div>
     </div><!-- ./game-block -->
-    
     <audio id="succss" src="audio/1.mp3" preload="auto"></audio>
     <audio id="fail" src="audio/2.mp3" preload="auto"></audio>
 
