@@ -12,7 +12,7 @@ function startGame() {
   stopClick();
   setTimeout(() => {
     timer = setInterval(time, duration);
-  }, 3000);
+  }, 5000);
 }
 
 // Click Start Game
@@ -25,7 +25,7 @@ function show() {
     block.classList.add("show");
     setTimeout(() => {
       block.classList.remove("show");
-    }, 3000);
+    }, 5000);
   });
 }
 
@@ -52,7 +52,11 @@ function time() {
     clearInterval(timer);
     const win = document.querySelector(".box-win");
     const yourTime = document.querySelector(".Your-time span");
+    const yourName = document.querySelector(".your-name span");
+    const yourTries = document.querySelector(".your-tries span");
     yourTime.textContent = document.querySelector(".timer").textContent;
+    yourName.textContent = document.querySelector(".name span").textContent;
+    yourTries.textContent = document.querySelector(".tries span").textContent;
     win.style.visibility = "visible";
   }
 }
@@ -91,7 +95,6 @@ function filpBlock(selectedBlock) {
 
   if (allFilppedBlocks.length == 2) {
     stopClick();
-
     checkMatched(allFilppedBlocks[0], allFilppedBlocks[1]);
   }
 
@@ -123,6 +126,10 @@ function checkMatched(firstBlock, secondBlock) {
     secondBlock.classList.add("match");
 
     document.querySelector("#succss").play();
+
+    let cards = document.querySelector(".allbox span");
+    cards.textContent = cards.textContent - 1;
+    console.log(cards);
   } else {
     triesCont.textContent = parseInt(triesCont.textContent) + 1;
     setTimeout(() => {
