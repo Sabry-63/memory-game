@@ -16,7 +16,8 @@ body {
     background-color: rgba(115, 194, 214, 0.89);
 }
 .box-win {
-    background-color: rgba(143, 99, 50, 0.89) !important;
+    background-color: transparent !important;
+    background: url('../images/winner.gif');
     visibility: hidden;
 }
 .start {
@@ -32,9 +33,13 @@ body {
     text-align: center;
     cursor: pointer;
 }
+.play-agin{
+    top: 90%;
+    z-index: 3;
+}
 .concent {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
@@ -50,7 +55,7 @@ body {
     width: 85%;
     margin: 20px auto;
     background-color: #fafafa;
-    border: 2px solid #f00;
+    border: 2px solid #3618af;
     padding: 15px;
     display: flex;
     font-size: 20px;
@@ -98,12 +103,13 @@ body {
     font-weight: bold;
 }
 .memory-game-blocks .game-block .back {
-    background: transparent;
+    background: #5d7eaf;
     transform: rotateY(180deg);
 }
 .memory-game-blocks .game-block .back img {
     height: 100%;
     width: 100%;
+    padding: 10%;
 }
 .memory-game-blocks .game-block .face {
     width: 100%;
@@ -111,7 +117,7 @@ body {
     position: absolute;
     text-align: center;
     backface-visibility: hidden;
-    border: 5px solid #f00;
+    border: 4px solid #3618af;
 }
 .memory-game-blocks .game-block.is-flipped,
 .memory-game-blocks .game-block.match {
@@ -119,6 +125,32 @@ body {
     -moz-transform: rotateY(180deg);
     transform: rotateY(180deg);
     pointer-events: none;
+}
+.sort{
+    background-color: #fafafa;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 6px;
+    opacity: .9;
+    overflow-y: scroll;
+    height: 200px;
+    list-style: none;
+}
+.sort li{
+    display: inline-block;
+    border-right: 1px solid;
+    padding: 5px;
+    font-weight: bold;
+}
+.sort li:last-child{
+    border-right: none;
+}
+.sort .locla-name span,
+.sort .locla-tries span,
+.sort .locla-time span{
+    display: block;
+    margin-top: 10px;
+    font-weight: normal;
 }
 @media (max-width: 992px) {
     .control-btn span {

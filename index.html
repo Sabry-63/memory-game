@@ -11,27 +11,39 @@
 <body>
   <div class="control-btn">
     <span class="start">Start Game</span>
-  </div>
-  <div class="box-win">
-    <div class="concent">
-      <span>Your Win</span>
-      <br>
-      <span class="Your-time">
-        Your Time:
-        <span></span>
-      </span>
-      <br>
-      <span class="your-name">
-        Your Name:
-        <span></span>
-      </span>
-      <br>
-      <span class="your-tries">
-        Worng Tries:
-        <span>0</span>
-      </span>
+
+    <div class="box-win">
+      <div class="concent">
+        <span>Your Win</span>
+        <br>
+        <span class="your-time">
+          Your <span></span>
+        </span>
+        <br>
+        <span class="your-name">
+          Your Name:<span></span>
+        </span>
+        <br>
+        <span class="your-tries">
+          Worng Tries:<span>0</span>
+        </span>
+
+        <ul class="sort">
+          <li class="locla-name">
+            players
+          </li>
+          <li class="locla-tries">
+            tries
+          </li>
+          <li class="locla-time">
+            time
+          </li>
+        </ul>
+
+
+      </div>
+
     </div>
-    
   </div>
   <div class="info-container">
     <div class="name">
@@ -39,8 +51,9 @@
       <span></span>
     </div>
     <div class="allbox">
-      Matching:
-      <span>10</span>
+      collected:
+      <span class="up">0</span>
+      <span>: 10</span>
     </div>
     <div class="timer">
       time:
@@ -197,6 +210,7 @@
     </div><!-- ./game-block -->
     <audio id="succss" src="audio/1.mp3" preload="auto"></audio>
     <audio id="fail" src="audio/2.mp3" preload="auto"></audio>
+    <audio id="winner" src="audio/winner.mp3" preload="auto"></audio>
 
   </div>
 
